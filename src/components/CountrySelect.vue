@@ -1,8 +1,10 @@
 <template lang="html">
+<main>
   <select v-on:change="handleChange" v-model="selectedCountry">
     <option value="" disabled selected>Choose a Country</option>
     <option v-for="(country, index) in countries" :key="index" :value="country"> {{country.name}} </option>
   </select>
+</main>
 
 </template>
 
@@ -27,4 +29,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
+select{
+  display: block;
+  margin-left: auto;
+  margin-right:auto;
+}
 </style>

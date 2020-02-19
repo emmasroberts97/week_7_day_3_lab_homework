@@ -40,4 +40,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
+main {
+background-image: url('../public/antique-map.jpeg');
+}
 </style>
