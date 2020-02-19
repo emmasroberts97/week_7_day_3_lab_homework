@@ -54,4 +54,8 @@ main {
 background-image: url('../public/antique-map.jpeg');
 background-size: cover;
 }
+h1 {
+  display: flex;
+  justify-content: center;
+}
 </style>
