@@ -1,6 +1,8 @@
 <template lang="html">
 <main>
-  <countries-list :countries='countries' />
+  <h1>Countries of the World</h1>
+  <!-- <countries-list :countries='countries' /> -->
+  <country-select :countries='countries' />
   <country-detail :country="selectedCountry" v-if="selectedCountry"/>
 </main>
 </template>
@@ -8,6 +10,7 @@
 <script>
 import CountriesList from './components/CountriesList.vue'
 import CountryDetail from './components/CountryDetail.vue'
+import CountrySelect from './components/CountrySelect.vue'
 import { eventBus } from './main.js'
 
 
@@ -30,7 +33,8 @@ export default {
   },
   components: {
     "countries-list": CountriesList,
-    "country-detail": CountryDetail
+    "country-detail": CountryDetail,
+    "country-select": CountrySelect
   }
 }
 </script>
