@@ -1,7 +1,7 @@
 <template lang="html">
   <form v-on:submit.prevent="handleSearch">
     <label for="country-search">Search for Countries:</label>
-    <input id="country-search" name="country-search" type="search" v-model="selectedCountry"></input>
+    <input id="country-search" name="country-search" type="search" v-model="selectedCountry" autocomplete="country"></input>
   </form>
 </template>
 
