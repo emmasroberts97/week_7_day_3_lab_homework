@@ -45,4 +45,8 @@ ul {
   justify-content: center;
   padding-left: 10px;
 }
+
+li {
+  margin: 10px;
+}
 </style>

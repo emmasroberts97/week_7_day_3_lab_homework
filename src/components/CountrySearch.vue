@@ -1,6 +1,7 @@
 <template lang="html">
   <form v-on:submit.prevent="handleSearch">
-    <input id="country-search" type="search" v-model="selectedCountry"></input>
+    <label for="country-search">Search for Countries:</label>
+    <input id="country-search" name="country-search" type="search" v-model="selectedCountry"></input>
   </form>
 </template>
 
@@ -28,5 +29,10 @@ input {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+label {
+  display: flex;
+  justify-content: center;
 }
 </style>
