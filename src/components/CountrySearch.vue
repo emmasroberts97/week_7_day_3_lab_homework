@@ -1,9 +1,8 @@
 <template lang="html">
 <main>
-  <form v-on:submit.prevent="handleSearch">
     <label for="country-search">Search for Countries:</label>
     <input id="country-search" name="country-search" type="search" v-model="selectedCountry"></input>
-  </form>
+
   <div v-if="selectedCountry != null">
   <country-detail v-for="(country, index) in filteredList" :key="index" :country="country" />
 </div>
@@ -30,9 +29,9 @@ export default {
   }
 },
   methods: {
-    handleSearch() {
-      eventBus.$emit('country-search', this.selectedCountry)
-    }
+    // handleSearch() {
+    //   eventBus.$emit('country-search', this.selectedCountry)
+    // }
   },
   components: {
     'country-detail': CountryDetail

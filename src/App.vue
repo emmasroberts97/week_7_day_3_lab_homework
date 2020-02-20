@@ -32,13 +32,13 @@ export default {
     eventBus.$on('country-selected', (country) => {
       this.selectedCountry = country;
     })
-    eventBus.$on('country-search', (location) => {
-      for (let country of this.countries) {
-        if (country.name.toLowerCase() == location.toLowerCase()){
-          this.selectedCountry = country;
-        }
-        }
-      })
+    // eventBus.$on('country-search', (location) => {
+    //   for (let country of this.countries) {
+    //     if (country.name.toLowerCase() == location.toLowerCase()){
+    //       this.selectedCountry = country;
+    //     }
+    //     }
+    //   })
   },
   components: {
     "countries-list": CountriesList,
