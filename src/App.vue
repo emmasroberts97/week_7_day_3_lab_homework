@@ -1,7 +1,7 @@
 <template lang="html">
 <main>
   <h1>Countries of the World</h1>
-  <country-search />
+  <country-search :countries="countries" />
   <!-- <countries-list :countries='countries' /> -->
   <country-select :countries='countries' />
   <country-detail :country="selectedCountry" v-if="selectedCountry"/>
@@ -34,7 +34,7 @@ export default {
     })
     eventBus.$on('country-search', (location) => {
       for (let country of this.countries) {
-        if (country.name == location){
+        if (country.name.toLowerCase() == location.toLowerCase()){
           this.selectedCountry = country;
         }
         }
